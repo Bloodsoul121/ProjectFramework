@@ -42,6 +42,11 @@ public abstract class PageRecyAdapter<T> extends BaseRecyAdapter<T> {
     }
 
     @Override
+    protected int getViewType(T data, int position) {
+        return TYPE_COMMON_VIEW;
+    }
+
+    @Override
     protected int getFooterViewCount() {
         return mIsOpenLoadMore && !mDatas.isEmpty() ? 1 : 0;
     }
@@ -164,7 +169,7 @@ public abstract class PageRecyAdapter<T> extends BaseRecyAdapter<T> {
         return max;
     }
 
-    public void setLoadMoreData(List<T> datas) {
+    public void addLoadMoreData(List<T> datas) {
         mIsLoading = false;
         insert(datas, mDatas.size());
     }

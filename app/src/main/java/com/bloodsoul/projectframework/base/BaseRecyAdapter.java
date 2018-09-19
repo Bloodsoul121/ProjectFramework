@@ -18,7 +18,7 @@ import java.util.List;
  */
 public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseRecyViewHolder> {
 
-    private static final int TYPE_COMMON_VIEW = 100001;//普通类型 Item
+    protected static final int TYPE_COMMON_VIEW = 100001;//普通类型 Item
     private static final int TYPE_FOOTER_VIEW = 100002;//footer类型 Item
     private static final int TYPE_INIT_LOADING_VIEW = 100003;//初始化加载时的提示View
     private static final int TYPE_EMPTY_VIEW = 100004;//初次加载无数据的默认空白view
@@ -146,13 +146,14 @@ public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseRecyVi
     }
 
     private void bindCommonItem(final BaseRecyViewHolder holder, final int position) {
-        onBindItemViewHolder(holder, getAllData().get(position), position);
+        final T t = mDatas.get(position);
+        onBindItemViewHolder(holder, t, position);
 
         holder.getItemView().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mItemClickListener != null) {
-                    mItemClickListener.onItemClick(holder, getAllData().get(position), position);
+                    mItemClickListener.onItemClick(holder, t, position);
                 }
             }
         });
@@ -163,7 +164,7 @@ public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseRecyVi
                 holder.getItemView().findViewById(mItemChildIds.get(i)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mItemChildListeners.get(tempI).onItemChildClick(holder, getAllData().get(position), position);
+                        mItemChildListeners.get(tempI).onItemChildClick(holder, t, position);
                     }
                 });
             }
@@ -282,26 +283,36 @@ public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseRecyVi
         }
     }
 
-    public void insert(List<T> datas, int position) {
+    public void insert(final List<T> datas, final int position) {
         if (position > mDatas.size() || position < 0) {
             return;
         }
-        mDatas.addAll(position, datas);
-        notifyItemRangeInserted(position + getHeaderCount(), datas.size());
-        notifyItemRangeChanged(position + getHeaderCount(), mDatas.size() - position);
+        mRecyclerView.post(new Runnable() {
+            @Override
+            public void run() {
+                mDatas.addAll(position, datas);
+                notifyItemRangeInserted(position + getHeaderCount(), datas.size());
+                notifyItemRangeChanged(position + getHeaderCount(), datas.size());
+            }
+        });
     }
 
     public void insert(List<T> datas) {
         insert(datas, mDatas.size());
     }
 
-    public void insert(T data, int position) {
+    public void insert(final T data, final int position) {
         if (position > mDatas.size() || position < 0) {
             return;
         }
-        mDatas.add(position, data);
-        notifyItemInserted(position + getHeaderCount());
-        notifyItemRangeChanged(position + getHeaderCount(), mDatas.size() - position);
+        mRecyclerView.post(new Runnable() {
+            @Override
+            public void run() {
+                mDatas.add(position, data);
+                notifyItemInserted(position + getHeaderCount());
+                notifyItemRangeChanged(position + getHeaderCount(), mDatas.size() - position);
+            }
+        });
     }
 
     public void insert(T data) {

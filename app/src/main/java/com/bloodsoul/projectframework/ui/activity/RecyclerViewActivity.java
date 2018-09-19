@@ -48,20 +48,20 @@ public class RecyclerViewActivity extends BaseActivity {
         mRecyclerView.setAdapter(adapter);
 
         final List<String> list = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 2; i++) {
             list.add("item - " + i);
         }
-
-        adapter.setData(list);
 
         adapter.setOnLoadMoreListener(new PageRecyAdapter.OnLoadMoreListener() {
             @Override
             public void onLoadMore(boolean isReload) {
-                adapter.setLoadMoreData(list);
+                adapter.addLoadMoreData(list);
             }
         });
-
+        adapter.openAutoLoadMore();
         adapter.startLoadMore();
+
+        adapter.setData(list);
     }
 
     private static class MyAdapter extends BaseRecyAdapter<String> {
@@ -120,7 +120,7 @@ public class RecyclerViewActivity extends BaseActivity {
             tv.setGravity(View.TEXT_ALIGNMENT_CENTER);
             tv.setPadding(10,10,10,10);
             tv.setText("loading end");
-            return tv;
+            return null;
         }
 
         @Override
