@@ -27,21 +27,25 @@ public class ViewPagerActivity extends BaseActivity {
         ViewPager viewPager = findViewById(R.id.viewpager);
 
         final List<String> list = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             list.add("page - " + i);
         }
 
         viewPager.setAdapter(new BaseViewPagerAdapter<String>(list) {
             @Override
-            protected CharSequence createPageTitle(int position) {
+            public CharSequence getPageTitle(int position) {
                 return mDatas.get(position);
             }
 
             @Override
             protected View createItemView(int position) {
                 TextView tv = new TextView(mContext);
-                tv.setText(mDatas.get(position));
                 return tv;
+            }
+
+            @Override
+            protected void bindItemView(View view, int position) {
+                ((TextView)view).setText(mDatas.get(position));
             }
         });
 
