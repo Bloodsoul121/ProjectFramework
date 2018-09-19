@@ -1,11 +1,11 @@
-package com.wwlh.projectframework.base;
+package com.bloodsoul.projectframework.base;
 
 import android.graphics.drawable.BitmapDrawable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.wwlh.projectframework.R;
+import com.bloodsoul.projectframework.R;
 
 /**
  *  导航栏 ( 视需求进行修改 )

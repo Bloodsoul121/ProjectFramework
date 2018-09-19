@@ -1,9 +1,9 @@
-package com.wwlh.projectframework.util;
+package com.bloodsoul.projectframework.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.wwlh.projectframework.common.MainApplication;
+import com.bloodsoul.projectframework.common.MainApplication;
 
 /**
  *  1. 根据不同模块定义SharedPreferences文件名

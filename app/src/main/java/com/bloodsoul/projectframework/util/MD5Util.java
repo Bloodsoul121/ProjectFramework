@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.util;
+package com.bloodsoul.projectframework.util;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

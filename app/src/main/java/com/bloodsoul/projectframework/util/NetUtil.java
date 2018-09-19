@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.util;
+package com.bloodsoul.projectframework.util;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
 
-import com.wwlh.projectframework.common.MainApplication;
+import com.bloodsoul.projectframework.common.MainApplication;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

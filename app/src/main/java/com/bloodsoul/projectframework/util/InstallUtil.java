@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.util;
+package com.bloodsoul.projectframework.util;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,7 +7,7 @@ import android.os.Build;
 import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 
-import com.wwlh.projectframework.common.MainApplication;
+import com.bloodsoul.projectframework.common.MainApplication;
 
 import java.io.File;
 

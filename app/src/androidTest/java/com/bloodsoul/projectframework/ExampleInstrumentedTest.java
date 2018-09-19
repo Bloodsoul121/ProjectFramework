@@ -1,4 +1,4 @@
-package com.wwlh.projectframework;
+package com.bloodsoul.projectframework;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

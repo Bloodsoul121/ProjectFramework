@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.ui.activity;
+package com.bloodsoul.projectframework.ui.activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,11 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.wwlh.projectframework.R;
-import com.wwlh.projectframework.base.BaseActivity;
-import com.wwlh.projectframework.base.BaseRecyAdapter;
-import com.wwlh.projectframework.base.BaseRecyViewHolder;
-import com.wwlh.projectframework.base.PageRecyAdapter;
+import com.bloodsoul.projectframework.R;
+import com.bloodsoul.projectframework.base.BaseActivity;
+import com.bloodsoul.projectframework.base.BaseRecyAdapter;
+import com.bloodsoul.projectframework.base.BaseRecyViewHolder;
+import com.bloodsoul.projectframework.base.PageRecyAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

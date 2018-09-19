@@ -1,4 +1,4 @@
-package com.wwlh.projectframework;
+package com.bloodsoul.projectframework;
 
 import org.junit.Test;
 

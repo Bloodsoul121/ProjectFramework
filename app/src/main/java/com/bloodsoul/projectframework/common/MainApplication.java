@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.common;
+package com.bloodsoul.projectframework.common;
 
 import android.app.Application;
 

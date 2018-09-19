@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.ui.statusbar;
+package com.bloodsoul.projectframework.ui.statusbar;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -12,7 +12,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.wwlh.projectframework.R;
+import com.bloodsoul.projectframework.R;
 
 @TargetApi(Build.VERSION_CODES.KITKAT)
 public class StatusbarKitKat {

@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.ui.statusbar;
+package com.bloodsoul.projectframework.ui.statusbar;
 
 import android.app.Activity;
 import android.os.Build;

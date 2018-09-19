@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.base;
+package com.bloodsoul.projectframework.base;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -10,8 +10,8 @@ import android.support.v4.app.Fragment;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.wwlh.projectframework.common.Config;
-import com.wwlh.projectframework.util.Logger;
+import com.bloodsoul.projectframework.common.Config;
+import com.bloodsoul.projectframework.util.Logger;
 
 public abstract class BaseFragment extends Fragment {
 

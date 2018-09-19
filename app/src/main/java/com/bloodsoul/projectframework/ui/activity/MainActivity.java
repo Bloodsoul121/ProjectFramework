@@ -1,11 +1,11 @@
-package com.wwlh.projectframework.ui.activity;
+package com.bloodsoul.projectframework.ui.activity;
 
 import android.Manifest;
 import android.os.Bundle;
 import android.view.View;
 
-import com.wwlh.projectframework.R;
-import com.wwlh.projectframework.base.PermissionActivity;
+import com.bloodsoul.projectframework.R;
+import com.bloodsoul.projectframework.base.PermissionActivity;
 
 import java.util.List;
 
@@ -40,5 +40,13 @@ public class MainActivity extends PermissionActivity {
 
     public void clickBtn2(View view) {
         startActivity(RecyclerViewActivity.class);
+    }
+
+    public void clickBtn3(View view) {
+        startActivity(ViewPagerActivity.class);
+    }
+
+    public void clickBtn4(View view) {
+        startActivity(LazyFragmentActivity.class);
     }
 }

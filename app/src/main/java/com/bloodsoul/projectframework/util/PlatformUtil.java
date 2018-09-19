@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.util;
+package com.bloodsoul.projectframework.util;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 
-import com.wwlh.projectframework.common.MainApplication;
+import com.bloodsoul.projectframework.common.MainApplication;
 
 import java.net.NetworkInterface;
 import java.util.Collections;
@@ -26,7 +26,7 @@ public class PlatformUtil {
     /**
      *  获取 App 包名
      */
-    public static String getAppPackageName() {
+    public static String getPackageName() {
         return getContext().getPackageName();
     }
 
@@ -59,6 +59,20 @@ public class PlatformUtil {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
             return -1;
+        }
+    }
+
+    public static String getVersionName() {
+        Context context = MainApplication.getInstance();
+        PackageManager p = context.getPackageManager();
+        String clientVersion;
+        try {
+            PackageInfo pi = p.getPackageInfo(context.getPackageName(), 0);
+            clientVersion = pi.versionName;
+            return clientVersion.toLowerCase().replace(" ", "");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "unknown";
         }
     }
 

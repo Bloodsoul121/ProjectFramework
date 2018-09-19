@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.base;
+package com.bloodsoul.projectframework.base;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -13,28 +13,34 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.wwlh.projectframework.common.Config;
-import com.wwlh.projectframework.util.Logger;
+import com.bloodsoul.projectframework.common.Config;
+import com.bloodsoul.projectframework.util.Logger;
 
 public abstract class BaseActivity extends AppCompatActivity {
 
+    protected Context mContext;
     private Toast toast;
 
     @Override
     public void setContentView(int layoutResID) {
         super.setContentView(layoutResID);
-        initView();
+        init();
     }
 
     @Override
     public void setContentView(View view, ViewGroup.LayoutParams params) {
         super.setContentView(view, params);
-        initView();
+        init();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    private void init() {
+        mContext = this;
+        initView();
     }
 
     protected void initView() {}

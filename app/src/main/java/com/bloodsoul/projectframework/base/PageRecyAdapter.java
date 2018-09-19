@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.base;
+package com.bloodsoul.projectframework.base;
 
 import android.content.Context;
 import android.support.v7.widget.GridLayoutManager;

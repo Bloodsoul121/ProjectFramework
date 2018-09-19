@@ -5,11 +5,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.wwlh.projectframework.ui.activity.MainActivity">
+    tools:context="com.bloodsoul.projectframework.ui.activity.MainActivity">
 
     <Button
         android:onClick="clickBtn"
-        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +20,22 @@
 
     <Button
         android:onClick="clickBtn2"
+        android:textAllCaps="false"
         android:text="RecyclerViewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="clickBtn3"
+        android:textAllCaps="false"
+        android:text="ViewPagerActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="clickBtn4"
+        android:textAllCaps="false"
+        android:text="LazyFragmentActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

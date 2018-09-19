@@ -1,4 +1,4 @@
-package com.wwlh.projectframework.base;
+package com.bloodsoul.projectframework.base;
 
 import android.content.DialogInterface;
 import android.content.Intent;
