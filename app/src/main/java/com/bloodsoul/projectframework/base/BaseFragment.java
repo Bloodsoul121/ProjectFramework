@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.bloodsoul.projectframework.common.Config;
 import com.bloodsoul.projectframework.util.Logger;
 
+import java.io.Serializable;
+
 public abstract class BaseFragment extends Fragment {
 
     private Toast toast;
@@ -26,6 +28,18 @@ public abstract class BaseFragment extends Fragment {
 //        fragment.setArguments(bundle);
 //        return fragment;
 //    }
+
+    public static <T extends BaseFragment> T newINSTANCE(Serializable data) {
+        BaseFragment fragment = T.newInstance();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("data", data);
+        fragment.setArguments(bundle);
+        return (T) fragment;
+    }
+
+    protected static <T extends BaseFragment> T newInstance() {
+        return null;
+    }
 
     public void startActivity(Class<? extends Activity> target) {
         startActivity(target, null);

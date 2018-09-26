@@ -15,6 +15,7 @@ import java.util.List;
  *  1.封装了头部view和底部view
  *  2.封装了初始化数据前后的UI展示
  *  3.封装了多种布局,由子类实现
+ *  4.bindRecyclerView 绑定控件
  */
 public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseRecyViewHolder> {
 
@@ -40,8 +41,11 @@ public abstract class BaseRecyAdapter<T> extends RecyclerView.Adapter<BaseRecyVi
     protected boolean mShowHeaderView;//是否显示HeaderView
     protected boolean mIsInitDataEnd;//是否已经初始化过数据了
 
-    protected abstract int getViewType(T data, int position);
     protected abstract int getItemLayoutId();
+
+    protected int getViewType(T data, int position) {
+        return TYPE_COMMON_VIEW;
+    }
 
     public BaseRecyAdapter(Context context) {
         this(context, null);

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bloodsoul.projectframework.ui.activity.ViewPagerActivity">
+    tools:context="com.bloodsoul.projectframework.test.ViewPagerActivity">
 
     <com.viewpagerindicator.TabPageIndicator
         android:id ="@+id/indicator"

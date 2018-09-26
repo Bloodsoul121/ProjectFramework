@@ -18,16 +18,16 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name=".test.TestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.RecyclerViewActivity" />
-        <activity android:name=".ui.activity.ViewPagerActivity" />
-        <activity android:name=".ui.activity.LazyFragmentActivity"/>
+        <activity android:name=".test.RecyclerViewActivity" />
+        <activity android:name=".test.ViewPagerActivity" />
+        <activity android:name=".test.LazyFragmentActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -43,6 +43,7 @@
             android:name="UMENG_CHANNEL"
             android:value="${UMENG_CHANNEL_VALUE}" />
 
+        <activity android:name=".test.XRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

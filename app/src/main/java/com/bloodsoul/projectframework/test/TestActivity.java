@@ -1,4 +1,4 @@
-package com.bloodsoul.projectframework.ui.activity;
+package com.bloodsoul.projectframework.test;
 
 import android.Manifest;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import com.bloodsoul.projectframework.base.PermissionActivity;
 
 import java.util.List;
 
-public class MainActivity extends PermissionActivity {
+public class TestActivity extends PermissionActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
     }
 
     @Override
@@ -48,5 +48,9 @@ public class MainActivity extends PermissionActivity {
 
     public void clickBtn4(View view) {
         startActivity(LazyFragmentActivity.class);
+    }
+
+    public void clickBtn5(View view) {
+        startActivity(XRecyclerViewActivity.class);
     }
 }

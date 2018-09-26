@@ -1,4 +1,4 @@
-package com.bloodsoul.projectframework.ui.activity;
+package com.bloodsoul.projectframework.test;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

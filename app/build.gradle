@@ -50,7 +50,7 @@ android {
     }
 }
 
-static def releaseTime(){
+static def releaseTime() {
     return new Date().format("yyyy-MM-dd")
 }
 
@@ -63,4 +63,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
     implementation project(':viewpagerindicator')
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
 }

@@ -42,11 +42,6 @@ public abstract class PageRecyAdapter<T> extends BaseRecyAdapter<T> {
     }
 
     @Override
-    protected int getViewType(T data, int position) {
-        return TYPE_COMMON_VIEW;
-    }
-
-    @Override
     protected int getFooterViewCount() {
         return mIsOpenLoadMore && !mDatas.isEmpty() ? 1 : 0;
     }

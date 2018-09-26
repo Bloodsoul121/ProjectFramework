@@ -1,4 +1,4 @@
-package com.bloodsoul.projectframework.ui.activity;
+package com.bloodsoul.projectframework.test;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -121,11 +121,6 @@ public class RecyclerViewActivity extends BaseActivity {
             tv.setPadding(10,10,10,10);
             tv.setText("loading end");
             return null;
-        }
-
-        @Override
-        protected int getViewType(String data, int position) {
-            return 0;
         }
 
         @Override

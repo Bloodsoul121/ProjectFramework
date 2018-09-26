@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bloodsoul.projectframework.ui.activity.MainActivity">
+    tools:context="com.bloodsoul.projectframework.test.TestActivity">
 
     <Button
         android:onClick="clickBtn"
@@ -36,6 +36,13 @@
         android:onClick="clickBtn4"
         android:textAllCaps="false"
         android:text="LazyFragmentActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="clickBtn5"
+        android:textAllCaps="false"
+        android:text="XRecyclerViewActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
