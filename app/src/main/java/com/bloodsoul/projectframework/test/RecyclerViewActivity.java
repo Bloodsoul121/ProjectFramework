@@ -80,7 +80,7 @@ public class RecyclerViewActivity extends BaseActivity {
         }
 
         @Override
-        protected int getItemLayoutId() {
+        protected int getItemLayoutId(int viewType) {
             return R.layout.layout_recyclerview_item;
         }
 
@@ -124,7 +124,7 @@ public class RecyclerViewActivity extends BaseActivity {
         }
 
         @Override
-        protected int getItemLayoutId() {
+        protected int getItemLayoutId(int viewType) {
             return R.layout.layout_recyclerview_item;
         }
 

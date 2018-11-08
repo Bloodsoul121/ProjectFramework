@@ -80,9 +80,9 @@ public class XRecyclerViewActivity extends BaseActivity {
 
 //        mXRecyclerView.setLoadingMoreEnabled(false);
 
-        mXAdapter.setOnItemClickListener(new BaseRecyAdapter.OnRecyclerViewItemClickerListener<String>() {
+        mXAdapter.setOnItemClickListener(new BaseRecyAdapter.OnRecyclerViewItemClickListener<String>() {
             @Override
-            public void onItemClick(BaseRecyViewHolder view, Object data, int position) {
+            public void onItemClick(BaseRecyViewHolder view, String data, int position) {
                 log("onItemClick - " + data + " / " + position + " / " + mXAdapter.getItemCount());
             }
         });
@@ -102,7 +102,7 @@ public class XRecyclerViewActivity extends BaseActivity {
         }
 
         @Override
-        protected int getItemLayoutId() {
+        protected int getItemLayoutId(int viewType) {
             return R.layout.layout_item_xrecy;
         }
 
